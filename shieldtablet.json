@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": 1795084772,
+      "datetime": 1795111329,
       "filename": "lineage-18.1-20261118-UNOFFICIAL-shieldtablet.zip",
-      "id": "e2c95fe4f0f9003a0b50088de31302cebfbe4b5915813e4985d814790d252877",
+      "id": "41ffa85aff4fd5160b05132750fe71d8aa5b4a3352569ad756c13e60164f525c",
       "romtype": "UNOFFICIAL",
-      "size": 520339242,
-      "url": "https://github.com/damnms/android_releases_shieldtablet/releases/download/shieldtablet-18.1-20261119-2/lineage-18.1-20261118-UNOFFICIAL-shieldtablet.zip",
+      "size": 520432234,
+      "url": "https://github.com/damnms/android_releases_shieldtablet/releases/download/shieldtablet-18.1-20261119-3/lineage-18.1-20261118-UNOFFICIAL-shieldtablet.zip",
       "version": "18.1"
     }
   ]
