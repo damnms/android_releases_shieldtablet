@@ -30,8 +30,8 @@ Unofficial LineageOS 18.1 (Android 11) for the NVIDIA SHIELD Tablet K1
   network, Wi-Fi Direct fails
 - Encryption can only be removed with *Format data*, which erases all
   data
-- HDMI: picture, sound and boot with a monitor are fixed in pre-release
-  20261123, waiting for a test with a monitor
+- HDMI: picture works in pre-release 20261123 (tested with a monitor),
+  sound does not yet
 - Not tested: headset microphone and button
 
 ## Installation
