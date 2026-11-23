@@ -32,6 +32,9 @@ Unofficial LineageOS 18.1 (Android 11) for the NVIDIA SHIELD Tablet K1
   data
 - HDMI: picture works in pre-release 20261123 (tested with a monitor),
   sound does not yet
+- Browser: the status and navigation bars flash over full screen videos.
+  Fixed for the next build; until then:
+  `adb shell settings put secure immersive_mode_confirmations confirmed`
 - Not tested: headset microphone and button
 
 ## Installation
