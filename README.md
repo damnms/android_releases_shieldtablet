@@ -18,6 +18,7 @@ Unofficial LineageOS 18.1 (Android 11) for the NVIDIA SHIELD Tablet K1
 - Rear and front camera (1080p30 video), hardware video decoding and
   encoding (1080p60), screen recording
 - Battery, charging, deep sleep, microSD, MTP and PTP, USB OTG
+- HDMI (mini-HDMI): picture and sound, plugging in and out while running
 - Encryption, screen lock, Google apps (Android 11, ARM)
 
 ## Known issues
@@ -30,11 +31,8 @@ Unofficial LineageOS 18.1 (Android 11) for the NVIDIA SHIELD Tablet K1
   network, Wi-Fi Direct fails
 - Encryption can only be removed with *Format data*, which erases all
   data
-- HDMI: picture works in pre-release 20261123; sound, web video speed
-  and glitches on the tablet screen are fixed for the next build
-- Browser: the status and navigation bars flash over full screen videos.
-  Fixed for the next build; until then:
-  `adb shell settings put secure immersive_mode_confirmations confirmed`
+- Browser: sounds of web pages (WebAudio) have small gaps, on HDMI and
+  on the speaker; video sound is clean
 - Not tested: headset microphone and button
 
 ## Installation
