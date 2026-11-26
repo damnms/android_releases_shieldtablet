@@ -1,0 +1,13 @@
+{
+  "response": [
+    {
+      "datetime": 1795724386,
+      "filename": "lineage-20.0-20261126-UNOFFICIAL-shieldtablet.zip",
+      "id": "4228694c7b7fc42740ddd8588a9d018a61232f77d9fd1e99a72d8a99264d8415",
+      "romtype": "UNOFFICIAL",
+      "size": 614885537,
+      "url": "https://github.com/damnms/android_releases_shieldtablet/releases/download/shieldtablet-20.0-20261126/lineage-20.0-20261126-UNOFFICIAL-shieldtablet.zip",
+      "version": "20.0"
+    }
+  ]
+}

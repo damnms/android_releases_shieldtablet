@@ -53,9 +53,11 @@ recovery. No data wipe.
 
 ## OTA updates
 
-`shieldtablet.json` is the update list for the LineageOS Updater, read
-through `lineage.updater.uri`. It points to the zip of the latest
-release; pre-releases are not listed.
+`shieldtablet.json` (LineageOS 18.1) and `shieldtablet-20.0.json`
+(LineageOS 20) are the update lists for the LineageOS Updater, read
+through `lineage.updater.uri`. Each points to the zip of the latest
+release of its version; pre-releases are not listed. 18.1 reads only
+its own file and is not offered 20.
 
 Sources: [local manifest](https://github.com/damnms/android_local_manifests_shieldtablet),
 [device tree](https://github.com/damnms/android_device_nvidia_shieldtablet),
