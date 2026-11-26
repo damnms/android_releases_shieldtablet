@@ -1,8 +1,68 @@
-# LineageOS 18.1 for the NVIDIA SHIELD Tablet
+# LineageOS for the NVIDIA SHIELD Tablet
 
-Unofficial LineageOS 18.1 (Android 11) for the NVIDIA SHIELD Tablet K1
-(shieldtablet). Downloads are on the
-[releases page](https://github.com/damnms/android_releases_shieldtablet/releases).
+Unofficial LineageOS 20 (Android 13) and 18.1 (Android 11) for the NVIDIA
+SHIELD Tablet K1 (shieldtablet). Downloads are on the
+[releases page](https://github.com/damnms/android_releases_shieldtablet/releases)
+(tags `shieldtablet-20.0-…` and `shieldtablet-18.1-…`).
+
+## LineageOS 20
+
+- LineageOS security backports up to the build date; Settings shows
+  patch level 2026-02-01. Kernel 3.10 (with an eBPF backport) and NVIDIA
+  blobs get no patches
+- SELinux enforcing, signed with private release keys, `userdebug`
+- Bootloader `4.00.2016.04` required (the zip checks it)
+- `/data` with file-based encryption
+- Tested on the Wi-Fi model; the LTE model is not tested
+
+### Working
+
+- Display, touch, sensors and rotation, auto-brightness
+- Wi-Fi 2.4 and 5 GHz including DFS channels
+- Bluetooth, speaker, microphone, GPS
+- Rear and front camera (photo, 1080p30 video), hardware video decoding
+  and encoding, screen recording
+- HDMI (mini-HDMI): picture and sound, plugging in and out while running,
+  web video at normal speed
+- Battery, charging over USB, deep sleep
+- Encryption with screen lock; motion sensors in the browser
+
+### Known issues
+
+- WPA3-only networks and networks with PMF required cannot be joined:
+  the Wi-Fi firmware has no SAE and no PMF; the Wi-Fi list marks them as
+  not supported. WPA2 and WPA2/WPA3 transition work
+- 5 GHz and DFS channels need a country code, taken from nearby access
+  points (two or more). The first connection after boot can land on
+  2.4 GHz; Wi-Fi then reconnects once
+- HDMI sound starts about 5 s after the screen turns on
+- The camera offers no video stabilization (it halved the frame rate)
+- Moving between 18.1 and 20 needs *Format data* in both directions
+  (18.1 encrypts the whole partition, 20 per file)
+
+### Not tested
+
+3.5 mm headphones, Bluetooth audio, hotspot with a client, Wi-Fi Direct,
+USB tethering, charging with a power adapter, standby overnight, stylus,
+microSD, MTP, USB OTG, Google apps, the LTE model.
+
+### Installation
+
+**Update from an earlier 20 release:** Settings → System → Updates, or
+`adb sideload` in the recovery. No data wipe. The recovery cannot read
+the encrypted `/data`, so it installs only over ADB.
+
+**From 18.1 or another ROM:**
+
+1. Unlock the bootloader: `fastboot oem unlock` (erases the tablet)
+2. `fastboot flash recovery recovery-lineage-20.0-….img` from the
+   release, boot into the recovery
+3. Factory reset → Format data
+4. Apply update → Apply from ADB: `adb sideload lineage-20.0-….zip`
+5. Reboot system now (`adb reboot` from the recovery boots the recovery
+   again)
+
+## LineageOS 18.1
 
 - LineageOS security backports up to the build date; Settings shows
   patch level 2024-02-05. Kernel 3.10 and NVIDIA blobs get no patches
@@ -10,7 +70,7 @@ Unofficial LineageOS 18.1 (Android 11) for the NVIDIA SHIELD Tablet K1
 - Bootloader `4.00.2016.04` required (the zip checks it)
 - Tested on the Wi-Fi model; the LTE model is not tested
 
-## Working
+### Working
 
 - Display, touch, stylus, sensors and rotation, auto-brightness
 - Wi-Fi 2.4 and 5 GHz, Wi-Fi Direct, hotspot, USB tethering
@@ -21,7 +81,7 @@ Unofficial LineageOS 18.1 (Android 11) for the NVIDIA SHIELD Tablet K1
 - HDMI (mini-HDMI): picture and sound, plugging in and out while running
 - Encryption, screen lock, Google apps (Android 11, ARM)
 
-## Known issues
+### Known issues
 
 - WPA3-only networks and networks with PMF required cannot be joined:
   the Wi-Fi firmware has no SAE and no PMF. WPA2 and WPA2/WPA3
@@ -35,7 +95,7 @@ Unofficial LineageOS 18.1 (Android 11) for the NVIDIA SHIELD Tablet K1
   on the speaker; video sound is clean
 - Not tested: headset microphone and button
 
-## Installation
+### Installation
 
 **Update:** Settings → System → Updates, or `adb sideload` in the
 recovery. No data wipe.
