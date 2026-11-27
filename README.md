@@ -29,6 +29,7 @@ SHIELD Tablet K1 (shieldtablet). Downloads are on the
   web video at normal speed
 - Battery, charging over USB, deep sleep
 - Encryption with screen lock; motion sensors in the browser
+- Stylus, USB OTG, Google apps (user reports)
 
 ### Known issues
 
@@ -45,14 +46,16 @@ SHIELD Tablet K1 (shieldtablet). Downloads are on the
   reboot; undo with `settings delete global wifi_country_code_from_scan`
 - HDMI sound starts about 5 s after the screen turns on
 - The camera offers no video stabilization (it halved the frame rate)
+- First boot: one user reports the boot animation and parts of the setup
+  wizard drawn partly outside the screen
 - Moving between 18.1 and 20 needs *Format data* in both directions
   (18.1 encrypts the whole partition, 20 per file)
 
 ### Not tested
 
 3.5 mm headphones, Bluetooth audio, hotspot with a client, Wi-Fi Direct,
-USB tethering, charging with a power adapter, standby overnight, stylus,
-microSD, MTP, USB OTG, Google apps, the LTE model.
+USB tethering, charging with a power adapter, standby overnight, microSD,
+MTP, the LTE model.
 
 ### Installation
 
