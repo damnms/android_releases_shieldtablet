@@ -14,6 +14,9 @@ SHIELD Tablet K1 (shieldtablet). Downloads are on the
 - Bootloader `4.00.2016.04` required (the zip checks it)
 - `/data` with file-based encryption
 - Tested on the Wi-Fi model; the LTE model is not tested
+- Fits both partition layouts (system partition 1.25 or 2 GiB). Apps
+  are compiled on the tablet after installing, the first minutes are
+  slower
 
 ### Working
 
@@ -35,6 +38,11 @@ SHIELD Tablet K1 (shieldtablet). Downloads are on the
 - 5 GHz and DFS channels need a country code, taken from nearby access
   points (two or more). The first connection after boot can land on
   2.4 GHz; Wi-Fi then reconnects once
+- The European Wi-Fi firmware tables have no channels 149–165, so
+  networks there (often phone hotspots) are not found once the country
+  code is set. To keep the worldwide table (36–48 and 149–165, no DFS):
+  `adb shell settings put global wifi_country_code_from_scan 0`, then
+  reboot; undo with `settings delete global wifi_country_code_from_scan`
 - HDMI sound starts about 5 s after the screen turns on
 - The camera offers no video stabilization (it halved the frame rate)
 - Moving between 18.1 and 20 needs *Format data* in both directions
