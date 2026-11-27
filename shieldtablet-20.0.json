@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": 1795724386,
-      "filename": "lineage-20.0-20261126-UNOFFICIAL-shieldtablet.zip",
-      "id": "4228694c7b7fc42740ddd8588a9d018a61232f77d9fd1e99a72d8a99264d8415",
+      "datetime": 1795741179,
+      "filename": "lineage-20.0-20261127-UNOFFICIAL-shieldtablet.zip",
+      "id": "810784b839779ae8b056010e0b854888241cf80465003eb12b951ac2fe62c1e1",
       "romtype": "UNOFFICIAL",
-      "size": 614885537,
-      "url": "https://github.com/damnms/android_releases_shieldtablet/releases/download/shieldtablet-20.0-20261126/lineage-20.0-20261126-UNOFFICIAL-shieldtablet.zip",
+      "size": 565332661,
+      "url": "https://github.com/damnms/android_releases_shieldtablet/releases/download/shieldtablet-20.0-20261127/lineage-20.0-20261127-UNOFFICIAL-shieldtablet.zip",
       "version": "20.0"
     }
   ]
