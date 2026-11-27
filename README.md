@@ -97,6 +97,11 @@ the encrypted `/data`, so it installs only over ADB.
 - 5 GHz networks on DFS channels (52–144) appear only after two nearby
   access points report the same country. While connected to such a
   network, Wi-Fi Direct fails
+- The European Wi-Fi firmware tables have no channels 149–165, so
+  networks there (often phone hotspots) are not found once the country
+  code is set. To keep the worldwide table (36–48 and 149–165, no DFS):
+  `adb shell settings put global wifi_country_code_from_scan 0`, then
+  reboot; undo with `settings delete global wifi_country_code_from_scan`
 - Encryption can only be removed with *Format data*, which erases all
   data
 - Browser: sounds of web pages (WebAudio) have small gaps, on HDMI and
